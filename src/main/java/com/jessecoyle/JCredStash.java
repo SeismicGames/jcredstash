@@ -42,6 +42,14 @@ public class JCredStash {
         this.cryptoImpl = new CredStashBouncyCastleCrypto();
     }
 
+    public AmazonDynamoDB getAmazonDynamoDBClient() {
+        return amazonDynamoDBClient;
+    }
+
+    public AWSKMS getAwskmsClient() {
+        return awskmsClient;
+    }
+
     /**
      * Represents a row in a credstash table. The encrypted key and encrypted contents are both stored base64 encoded.
      * The hmac digest is stored hex encoded.
